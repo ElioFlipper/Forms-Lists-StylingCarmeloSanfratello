@@ -7,13 +7,22 @@ export function Login(){
    })
 
    function handleInputChange(event){
+    const name = event.target.name
     const value = event.target.value
+
+    setData(d => {
+        const updated = {...d}
+        updated[name] = value
+        return updated
+    })
    }
 
    return (
     <div>
-        <input value = {data.username} onInput={handleInputChange} />
-        <input value = {data.password} onInput={handleInputChange} />
+        <input name = "username" value = {data.username} onInput={handleInputChange} />
+        <input name = "password" type = "password" value = {data.password} onInput={handleInputChange} />
+        <label for="id">Ricordami</label>
+        <input type="checkbox" id = "checkbox" />
     </div>
    )
 }
