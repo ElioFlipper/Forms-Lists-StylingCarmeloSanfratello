@@ -22,8 +22,10 @@ export function Login() {
         <div>
             <input name="username" value={data.username} onInput={handleInputChange} />
             <input name="password" type="password" value={data.password} onInput={handleInputChange} />
+            <button disabled={!data.username || !data.password}>Login</button>
             <label for="id">Ricordami</label>
             <input type="checkbox" id="checkbox" />
+
         </div>
     )
 }
