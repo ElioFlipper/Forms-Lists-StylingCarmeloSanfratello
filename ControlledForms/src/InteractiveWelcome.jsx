@@ -10,8 +10,6 @@ export function InteractiveWelcome(){
         setUsername(value)
     }
 
-    console.log(username)
-
     return(
         <div>
             <Welcome name={username} eta={28} />
