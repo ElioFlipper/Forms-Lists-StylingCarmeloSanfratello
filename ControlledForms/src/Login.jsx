@@ -41,6 +41,7 @@ export function Login({ onLogin }) {
 
     return (
         <form onSubmit={handleLogin}>
+            <h1>Controlled Login</h1>
             <input name="username" value={data.username} onInput={handleInputChange} />
             <input name="password" type="password" value={data.password} onInput={handleInputChange} />
             <button name="login" disabled={!data.username || !data.password} onClick={onLogin}>Login</button>
