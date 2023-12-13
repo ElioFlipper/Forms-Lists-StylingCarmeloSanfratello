@@ -33,8 +33,14 @@ export function Login({ onLogin }) {
         })
     }
 
+    function handleLogin(event) {
+        //Posso prevenire il comportamento di "form" inserendo in questa riga event.preventDefault()
+        console.log('Login button pressed')
+    }
+
+
     return (
-        <div>
+        <form onSubmit={handleLogin}>
             <input name="username" value={data.username} onInput={handleInputChange} />
             <input name="password" type="password" value={data.password} onInput={handleInputChange} />
             <button name="login" disabled={!data.username || !data.password} onClick={onLogin}>Login</button>
@@ -44,6 +50,6 @@ export function Login({ onLogin }) {
             <pre>
                 {JSON.stringify(data, null, 2)}
             </pre>
-        </div>
+        </form>
     )
 }
