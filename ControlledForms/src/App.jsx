@@ -6,7 +6,6 @@ import { FocusableInput } from "./FocusableInput";
 export function App() {
   return (
     <div>
-      <Color id = "" name="yellow" />
       <Colors colors={[
         {id:1, name:"yellow"},
         {id:2, name:"red"},
