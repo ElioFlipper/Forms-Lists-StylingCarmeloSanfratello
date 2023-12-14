@@ -2,6 +2,7 @@ import { Color } from "./Color";
 import { Colors } from "./Colors";
 import { Counter } from "./Counter";
 import { FocusableInput } from "./FocusableInput";
+import { ToDoList } from "./ListsAndState";
 
 export function App() {
   return (
@@ -13,6 +14,8 @@ export function App() {
         {id:4, name:"blue"},
         {id:5, name:"marrò"},
       ]}/>
+
+      <ToDoList />
     </div>
   )
 } 
