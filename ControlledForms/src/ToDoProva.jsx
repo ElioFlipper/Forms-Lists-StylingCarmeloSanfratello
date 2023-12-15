@@ -19,7 +19,7 @@ export function ToDo2() {
     function handleRemove(index) {
         let newArr = todos
         newArr.splice(index, 1)
-        setTodos(newArr)
+        setTodos([...newArr])
     }
 
     return (
